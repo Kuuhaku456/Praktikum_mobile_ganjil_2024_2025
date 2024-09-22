@@ -30,6 +30,7 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFE9FF97),
       body: ListView(
         children: [
           SizedBox(
@@ -188,17 +189,17 @@ class MyHomePage extends StatelessWidget {
             width: double.infinity,
             height: 85,
             margin: const EdgeInsets.only(top: 10, bottom: 10),
-            padding: const EdgeInsets.only(left: 20,right: 20),
+            padding: const EdgeInsets.only(left: 20, right: 20),
             child: Center(
               child: ListView(
                 padding: const EdgeInsets.only(top: 10, bottom: 10),
                 scrollDirection: Axis.horizontal,
                 children: [
                   Container(
-                    width: 110,
+                    width: 120,
                     margin: const EdgeInsets.only(right: 15),
                     decoration: BoxDecoration(
-                      color: Colors.blue,
+                      color: const Color(0xFFFFD18E),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
@@ -208,7 +209,7 @@ class MyHomePage extends StatelessWidget {
                           padding: EdgeInsets.only(right: 5),
                           child: FaIcon(
                             FontAwesomeIcons.tooth,
-                            size: 30,
+                            size: 20,
                           ),
                         ),
                         Text(
@@ -222,33 +223,455 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: 110,
+                    width: 120,
                     margin: const EdgeInsets.only(right: 15),
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: const Color(0xFFFFD18E),
                       borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: FaIcon(
+                            FontAwesomeIcons.bedPulse,
+                            size: 20,
+                          ),
+                        ),
+                        Text(
+                          "inpatient",
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
-                    width: 110,
+                    width: 120,
                     margin: const EdgeInsets.only(right: 15),
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: const Color(0xFFFFD18E),
                       borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: FaIcon(
+                            FontAwesomeIcons.lungs,
+                            size: 20,
+                          ),
+                        ),
+                        Text(
+                          "lungs",
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   Container(
-                    width: 110,
+                    width: 120,
                     margin: const EdgeInsets.only(right: 15),
                     decoration: BoxDecoration(
-                      color: Colors.red,
+                      color: const Color(0xFFFFD18E),
                       borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(right: 5),
+                          child: FaIcon(
+                            FontAwesomeIcons.brain,
+                            size: 20,
+                          ),
+                        ),
+                        Text(
+                          "neurosurgery",
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
           ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  'Doctor list',
+                  style: GoogleFonts.poppins(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 170),
+                child: Text(
+                  'see All',
+                  style: GoogleFonts.poppins(
+                    fontSize: 12,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 23, bottom: 20),
+                  width: 140,
+                  height: 170,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFD18E),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Stack(
+                        children: [
+                          const SizedBox(
+                            width: 85,
+                            height: 85,
+                          ),
+                          Positioned(
+                            left: 8,
+                            child: Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFFA38F),
+                                borderRadius: BorderRadius.circular(50),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/dokter_cewe.jpeg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 50,
+                            right: 19.5,
+                            child: Center(
+                              child: Container(
+                                width: 45,
+                                height: 25,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFFF7EE2),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    const FaIcon(
+                                      FontAwesomeIcons
+                                          .solidStar, // Ikon bintang dari FontAwesome
+                                      color: Color(0xFFE9FF97),
+                                      size: 10,
+                                    ),
+                                    Text(
+                                      '4.5', // Rating
+                                      style: GoogleFonts.poppins(
+                                          color: Colors.black,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Text(
+                        'Dr. Arline McCoy',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text('Philadelphia, 27 y.e.',
+                          style: GoogleFonts.poppins(
+                            fontSize: 10,
+                            fontWeight: FontWeight.normal,
+                          ))
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10),
+                  padding: const EdgeInsets.only(top: 23, bottom: 20),
+                  width: 140,
+                  height: 170,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFFFD18E),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Stack(
+                        children: [
+                          const SizedBox(
+                            width: 85,
+                            height: 85,
+                          ),
+                          Positioned(
+                            left: 8,
+                            child: Container(
+                              width: 70,
+                              height: 70,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFFA38F),
+                                borderRadius: BorderRadius.circular(50),
+                                image: const DecorationImage(
+                                  image: AssetImage("assets/dokter_cowo.jpeg"),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            top: 50,
+                            right: 19.5,
+                            child: Center(
+                              child: Container(
+                                width: 45,
+                                height: 25,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFFF7EE2),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    const FaIcon(
+                                      FontAwesomeIcons
+                                          .solidStar, // Ikon bintang dari FontAwesome
+                                      color: Color(0xFFE9FF97),
+                                      size: 10,
+                                    ),
+                                    Text(
+                                      '5.0', // Rating
+                                      style: GoogleFonts.poppins(
+                                          color: Colors.black,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w500),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Text(
+                        'Dr. Jhonny Sins',
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text('Washington, 23 y.e.',
+                          style: GoogleFonts.poppins(
+                            fontSize: 10,
+                            fontWeight: FontWeight.normal,
+                          ))
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 23, bottom: 20),
+                width: 140,
+                height: 170,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFD18E),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Stack(
+                      children: [
+                        const SizedBox(
+                          width: 85,
+                          height: 85,
+                        ),
+                        Positioned(
+                          left: 8,
+                          child: Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFFA38F),
+                              borderRadius: BorderRadius.circular(50),
+                              image: const DecorationImage(
+                                image: AssetImage("assets/dokter_cewe.jpeg"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 50,
+                          right: 19.5,
+                          child: Center(
+                            child: Container(
+                              width: 45,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFF7EE2),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const FaIcon(
+                                    FontAwesomeIcons
+                                        .solidStar, // Ikon bintang dari FontAwesome
+                                    color: Color(0xFFE9FF97),
+                                    size: 10,
+                                  ),
+                                  Text(
+                                    '4.5', // Rating
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.black,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Text(
+                      'Dr. Arline McCoy',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text('Philadelphia, 27 y.e.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 10,
+                          fontWeight: FontWeight.normal,
+                        ))
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 10),
+                padding: const EdgeInsets.only(top: 23, bottom: 20),
+                width: 140,
+                height: 170,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFD18E),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Stack(
+                      children: [
+                        const SizedBox(
+                          width: 85,
+                          height: 85,
+                        ),
+                        Positioned(
+                          left: 8,
+                          child: Container(
+                            width: 70,
+                            height: 70,
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFFFA38F),
+                              borderRadius: BorderRadius.circular(50),
+                              image: const DecorationImage(
+                                image: AssetImage("assets/dokter_cowo.jpeg"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Positioned(
+                          top: 50,
+                          right: 19.5,
+                          child: Center(
+                            child: Container(
+                              width: 45,
+                              height: 25,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFFF7EE2),
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  const FaIcon(
+                                    FontAwesomeIcons
+                                        .solidStar, // Ikon bintang dari FontAwesome
+                                    color: Color(0xFFE9FF97),
+                                    size: 10,
+                                  ),
+                                  Text(
+                                    '5.0', // Rating
+                                    style: GoogleFonts.poppins(
+                                        color: Colors.black,
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                    Text(
+                      'Dr. Jhonny Sins',
+                      style: GoogleFonts.poppins(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text('Washington, 23 y.e.',
+                        style: GoogleFonts.poppins(
+                          fontSize: 10,
+                          fontWeight: FontWeight.normal,
+                        ))
+                  ],
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
