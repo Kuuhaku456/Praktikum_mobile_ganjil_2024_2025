@@ -33,9 +33,10 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: const Color(0xFFE9FF97),
       body: ListView(
         children: [
-          SizedBox(
+          Container(
             width: 100,
             height: 77,
+            // color: Colors.yellow,
             child: Row(
               children: [
                 Column(
@@ -105,10 +106,11 @@ class MyHomePage extends StatelessWidget {
                 Container(
                   width: 165,
                   height: 170,
+                  // color: Colors.red,
                   margin: const EdgeInsets.fromLTRB(5, 5, 10, 5),
                   padding: const EdgeInsets.only(left: 5, right: 5),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const SizedBox(height: 25),
                       Text(
@@ -188,6 +190,7 @@ class MyHomePage extends StatelessWidget {
           Container(
             width: double.infinity,
             height: 85,
+            color: Colors.black,
             margin: const EdgeInsets.only(top: 10, bottom: 10),
             padding: const EdgeInsets.only(left: 20, right: 20),
             child: Center(
@@ -349,9 +352,9 @@ class MyHomePage extends StatelessWidget {
                     children: [
                       Stack(
                         children: [
-                          const SizedBox(
+                          Container(
                             width: 85,
-                            height: 85,
+                            height: 85,                            
                           ),
                           Positioned(
                             left: 8,
